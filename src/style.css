@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+
+:root {
+    --clr-primary: hsl(259, 100%, 65%);
+    --clr-error: hsl(0, 100%, 67%);
+    --clr-neutral-000: hsl(0, 0%, 100%);
+    --clr-neutral-50: hsl(0, 0%, 94%);
+    --clr-neutral-100: hsl(0, 0%, 86%);
+    --clr-neutral-300: hsl(0, 1%, 44%);
+    --clr-neutral-950: hsl(0, 0%, 8%);
+
+    --ff-base: 'Poppins', sans-serif;
+    --fs-2rem: 2rem;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+}
+
+body {
+    font-family: var(--ff-base);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--clr-neutral-50);
+}
+
+.app{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    background-color: var(--clr-neutral-000);
+    padding: 3rem 1.5rem;
+    width: 90%;
+    border-radius : 25px 25px 95px 25px
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 2px solid var(--clr-neutral-100);
+    gap: 1rem;
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.form-control input,
+.form-control label {
+    display: block;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--clr-neutral-300);
+}
+
+.form-control input {
+    font-size: var(--fs-2rem);
+    font-weight: var(--fw-bold);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--clr-neutral-100);
+    width: 100%;
+}
+
+.form-control input:focus {
+    outline: none;
+    border-color: var(--clr-primary);
+}
+
+.form-actions{
+    position: relative;
+    background-color: red;
+    grid-column: span 3;
+    text-align: center;
+}
+
+.form-actions button{
+    position: absolute;
+    border-radius: 50%;
+    background: var(--clr-primary);
+    border: none;
+    font-weight: var(--fw-extrabold);
+    color: var(--clr-neutral-000);
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+    left: 50%;
+    top: 1.5rem;
+    transform: translateX(-50%);
+}
+
+.output{
+    padding: 2rem 0.5rem;
+    font-size: var(--fs-2rem);
+    font-weight: var(--fw-extrabold);
+    font-style: italic;
+}
+.output .output__number{
+    color: var(--clr-primary);
+}
