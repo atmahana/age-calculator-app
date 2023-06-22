@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="stylesheet" href="./src/reset.css" >
+  <link rel="stylesheet" href="./src/reset.css">
   <link rel="stylesheet" href="./src/style.css">
   <title>Frontend Mentor | Age calculator app</title>
   <style>
@@ -25,17 +25,20 @@
     <div class="wrapper">
       <form class="form-group">
         <!-- control all the dates element's value with javascript Date object -->
-        <div class="form-control invalid">
+        <div class="form-control">
           <label for="day">DAY</label>
-          <input id="day" type="number" placeholder="DD">
+          <input id="day" type="number" placeholder="DD" min="1" max="31">
+          <p class="error-text"></p>
         </div>
         <div class="form-control">
           <label for="month">MONTH</label>
-          <input id="month" type="number" placeholder="MM">
+          <input id="month" type="number" placeholder="MM" min="1" max="12">
+          <p class="error-text"></p>
         </div>
         <div class="form-control">
           <label for="year">YEAR</label>
-          <input id="year" type="number" placeholder="YYYY"> 
+          <input id="year" type="number" placeholder="YYYY" max="2023" maxlength="4" size="4">
+          <p class="error-text"></p>
         </div>
         <div class="form-actions">
           <button type="submit">+</button>
@@ -43,9 +46,9 @@
       </form>
       <div class="output">
         <ul>
-          <li><span class="output__number">--</span> years</li>
-          <li><span class="output__number">--</span> months</li>
-          <li><span class="output__number">--</span> days</li>
+          <li><span id="output_years" class="output__number">--</span> years</li>
+          <li><span id="output_months" class="output__number">--</span> months</li>
+          <li><span id="output_days" class="output__number">--</span> days</li>
         </ul>
       </div>
     </div>

@@ -24,7 +24,7 @@ body {
     background-color: var(--clr-neutral-50);
 }
 
-.app{
+.app {
     min-height: 90vh;
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@ body {
     background-color: var(--clr-neutral-000);
     padding: 3rem 1.5rem;
     width: 90%;
-    border-radius : 25px 25px 95px 25px
+    border-radius: 25px 25px 95px 25px
 }
 
 .form-group {
@@ -72,14 +72,14 @@ body {
     border-color: var(--clr-primary);
 }
 
-.form-actions{
+.form-actions {
     position: relative;
     background-color: red;
     grid-column: span 3;
     text-align: center;
 }
 
-.form-actions button{
+.form-actions button {
     position: absolute;
     border-radius: 50%;
     background: var(--clr-primary);
@@ -91,14 +91,38 @@ body {
     left: 50%;
     top: 1.5rem;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
-.output{
+.form-actions button:hover {
+    background: hsl(259, 54%, 43%);
+}
+
+.invalid input {
+    border: 1px solid var(--clr-error);
+}
+
+.invalid label {
+    color: red;
+}
+
+.invalid input:focus {
+    border-color: var(--clr-primary);
+}
+
+.error-text {
+    color: var(--clr-error);
+    font-style: italic;
+}
+
+
+.output {
     padding: 2rem 0.5rem;
     font-size: var(--fs-2rem);
     font-weight: var(--fw-extrabold);
     font-style: italic;
 }
-.output .output__number{
+
+.output .output__number {
     color: var(--clr-primary);
 }
